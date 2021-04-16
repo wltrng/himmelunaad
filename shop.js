@@ -106,57 +106,52 @@ window.addEventListener('DOMContentLoaded', function () {
             filterCategoriesInputs.forEach((input, i) => {
                 const span = document.createElement('span');
                 span.classList.add('icon');
+                switch (input.value) {
+                    case "Obst & Gemüse":
+                        span.style.backgroundImage = obstGemueseIcon;
+                        break;
+                    case "Backwaren":
+                        span.style.backgroundImage = brotIcon;
+                        break;
+                    case "Milchprodukte & Eier":
+                        span.style.backgroundImage = milchprodukteIcon;
+                        break;
+                    case "Fertiges":
+                        span.style.backgroundImage = fertiggerichteIcon;
+                        break;
+                    case "Fleisch & Wurst":
+                        span.style.backgroundImage = fleischIcon;
+                        break;
+                    case "Trockenprodukte":
+                        span.style.backgroundImage = trockenprodukteIcon;
+                        break;
+                    case "Aufstriche":
+                        span.style.backgroundImage = aufstrichIcon;
+                        break;
+                    case "Gewürze & Öl":
+                        span.style.backgroundImage = gewuerzeIcon;
+                        break;
+                    case "Getränke":
+                        span.style.ba
+                        ckgroundImage = getraenkeIcon;
+                        break;
+                    case "Neu bei uns":
+                        span.style.backgroundImage = getraenkeIcon;
+                        break;
+                    case "Vegan":
+                        span.style.backgroundImage = veganIcon;
+                        break;
+                    case "Non-Food":
+                        span.style.backgroundImage = nonfoodIcon;
+                        break;
+                };
+        
                 input.parentNode.prepend(span);
-
+        
             });
 
         }
     }, 100);
-    filterCategoriesInputs.forEach((input, i) => {
-        const span = document.createElement('span');
-        span.classList.add('icon');
-        switch (input.value) {
-            case "Obst & Gemüse":
-                span.style.backgroundImage = obstGemueseIcon;
-                break;
-            case "Backwaren":
-                span.style.backgroundImage = brotIcon;
-                break;
-            case "Milchprodukte & Eier":
-                span.style.backgroundImage = milchprodukteIcon;
-                break;
-            case "Fertiges":
-                span.style.backgroundImage = fertiggerichteIcon;
-                break;
-            case "Fleisch & Wurst":
-                span.style.backgroundImage = fleischIcon;
-                break;
-            case "Trockenprodukte":
-                span.style.backgroundImage = trockenprodukteIcon;
-                break;
-            case "Aufstriche":
-                span.style.backgroundImage = aufstrichIcon;
-                break;
-            case "Gewürze & Öl":
-                span.style.backgroundImage = gewuerzeIcon;
-                break;
-            case "Getränke":
-                span.style.ba
-                ckgroundImage = getraenkeIcon;
-                break;
-            case "Neu bei uns":
-                span.style.backgroundImage = getraenkeIcon;
-                break;
-            case "Vegan":
-                span.style.backgroundImage = veganIcon;
-                break;
-            case "Non-Food":
-                span.style.backgroundImage = nonfoodIcon;
-                break;
-        };
-
-        input.parentNode.prepend(span);
-
-    });
+    
 
 });
