@@ -22,7 +22,7 @@ const obstGemueseIcon = 'url(https://my.frachtpilot.de/image/814a783d/url/475dcb
 
 window.addEventListener('DOMContentLoaded', function() {
 
-    document.querySelector('.filter-attribute[data-filter-attribute="category"]').style.display='block');
+    document.querySelector('.filter-attribute[data-filter-attribute="category"]').style.display='block';
     //display alert-info ('Hallo..') in s-filter-column, not in s-main
     const q = document.querySelectorAll('.s-filter-column .alert');
     q.forEach(el => {el.parentNode.classList.remove('d-sm-none')})
@@ -115,8 +115,3 @@ window.addEventListener('DOMContentLoaded', function() {
     
     })
 });
-
-const getFilterCategoriesInputs = async () => {
-
-    return document.querySelector('.filter-attribute[data-filter-attribute="category"]').querySelectorAll('.s-filter-choices .ilx-filter-item input')
-}
