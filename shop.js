@@ -95,16 +95,13 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
     //add Icons
+    const filterCategories = document.querySelector('.filter-attribute[data-filter-attribute="category"]')
+    const filterCategoriesInputs = filterCategories.querySelectorAll('.s-filter-choices .ilx-filter-item input')
+
     const filterCategories = document.querySelector('.filter-attribute[data-filter-attribute="category"]');
     // const filterCategoriesInputs = filterCategories.querySelectorAll('.s-filter-choices .ilx-filter-item input');
     // console.log('filterCategories', filterCategories, 'filterCategoriesInputs', filterCategoriesInputs);
-    let filterCategoriesInputs;
-    for (let i = 0; i < filterCategories.childNodes.length; i++) {
-        if (hasClass(filterCategories.childNodes[i], "s-filter-choices")) {
-            filterCategoriesInputs = filterCategories.childNodes[i];
-            break;
-        }
-    }
+
     filterCategoriesInputs.forEach((input, i) => {
         const span = document.createElement('span');
         span.classList.add('icon');
