@@ -58,6 +58,7 @@
   }
   
   .filter-attribute[data-filter-attribute=category] {
+    display: block !important;
     cursor: pointer;
   }
   .filter-attribute[data-filter-attribute=category] .s-filter-choices {
