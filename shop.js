@@ -6,23 +6,23 @@ const deliveryDays = 'Liefertage: Dienstag und Freitag';
 /* 
 /* SET IMAGE SOURCE FOR ICONS
  */
-const aufstrichIcon = 'url(https://my.frachtpilot.de/image/bc27b782/url/475dcb42)';
-const fleischIcon = 'url(https://my.frachtpilot.de/image/743194ae/url/475dcb42)';
-const neuIcon = 'url(https://my.frachtpilot.de/image/8a995441/url/475dcb42)';
-const gewuerzeIcon = 'url(https://my.frachtpilot.de/image/d7e76082/url/475dcb42)';
-const brotIcon = 'url(https://my.frachtpilot.de/image/f9f5144e/url/475dcb42)';
-const getraenkeIcon = 'url(https://my.frachtpilot.de/image/7a196cc0/url/475dcb42)';
-const nonfoodIcon = 'url(https://my.frachtpilot.de/image/75043000/url/475dcb42)';
-const trockenprodukteIcon = 'url(https://my.frachtpilot.de/image/973b7d3f/url/475dcb42)';
-const fertiggerichteIcon = 'url(https://my.frachtpilot.de/image/5c97e5ef/url/475dcb42)';
-const milchprodukteIcon = 'url(https://my.frachtpilot.de/image/e548bfec/url/475dcb42)';
-const veganIcon = 'url(https://my.frachtpilot.de/image/a5cb912c/url/475dcb42)';
-const obstGemueseIcon = 'url(https://my.frachtpilot.de/image/814a783d/url/475dcb42)';
+const aufstrichIcon = 'url(https://my.frachtpilot.de/image/bc27b782/url/475dcb42)'
+const fleischIcon ='url(https://my.frachtpilot.de/image/743194ae/url/475dcb42)'
+const neuIcon ='url(https://my.frachtpilot.de/image/8a995441/url/475dcb42)'
+const gewuerzeIcon = 'url(https://my.frachtpilot.de/image/d7e76082/url/475dcb42)'
+const brotIcon = 'url(https://my.frachtpilot.de/image/f9f5144e/url/475dcb42)'
+const getraenkeIcon = 'url(https://my.frachtpilot.de/image/7a196cc0/url/475dcb42)'
+const nonfoodIcon = 'url(https://my.frachtpilot.de/image/75043000/url/475dcb42)'
+const trockenprodukteIcon ='url(https://my.frachtpilot.de/image/973b7d3f/url/475dcb42)'
+const fertiggerichteIcon = 'url(https://my.frachtpilot.de/image/5c97e5ef/url/475dcb42)'
+const milchprodukteIcon = 'url(https://my.frachtpilot.de/image/e548bfec/url/475dcb42)'
+const veganIcon ='url(https://my.frachtpilot.de/image/a5cb912c/url/475dcb42)'
+const obstGemueseIcon = 'url(https://my.frachtpilot.de/image/814a783d/url/475dcb42)'
 
 
+window.addEventListener('DOMContentLoaded', function() {
 
-window.addEventListener('DOMContentLoaded', function () {
-
+    document.querySelector('.filter-attribute[data-filter-attribute="category"]').style.display='block';
     //display alert-info ('Hallo..') in s-filter-column, not in s-main
     const q = document.querySelectorAll('.s-filter-column .alert');
     q.forEach(el => {
