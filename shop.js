@@ -25,8 +25,10 @@ window.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.filter-attribute[data-filter-attribute="category"]').style.display='block';
     //display alert-info ('Hallo..') in s-filter-column, not in s-main
     const q = document.querySelectorAll('.s-filter-column .alert');
-    q.forEach(el => {el.parentNode.classList.remove('d-sm-none')})
-    
+    q.forEach(el => {
+        el.parentNode.classList.remove('d-sm-none')
+    });
+
     // remove cols from filterColumn
     const filterColumn = document.querySelector('.s-filter-column');
     for (let i = filterColumn.classList.length - 1; i >= 0; i--) {
@@ -37,7 +39,7 @@ window.addEventListener('DOMContentLoaded', function() {
         filterColumn.classList.add('col-12')
     }
     filterColumn.lastElementChild.classList.remove('mb-sm-0')
-    
+
     // remove cols from mainColumn
     const mainColumn = document.querySelector('.s-main-column');
     for (let i = mainColumn.classList.length - 1; i >= 0; i--) {
@@ -45,11 +47,12 @@ window.addEventListener('DOMContentLoaded', function() {
         if (className.startsWith('col-')) {
             mainColumn.classList.remove(className);
         }
-        mainColumn.classList.add('col-12')
+        mainColumn.classList.add('col-12');
     }
-    
+
     //remove filter attributes, keep categories
     // document.querySelectorAll('.filter-attribute:not([data-filter-attribute="category"])').forEach(el => {el.style.display="none"})
+
     const panelBody = mainColumn.querySelector('.s-panel-body')
     panelBody.classList.remove('align-items-start')
     panelBody.classList.add('align-items-stretch')
@@ -59,59 +62,96 @@ window.addEventListener('DOMContentLoaded', function() {
             if (className.startsWith('col-')) {
                 item.classList.remove(className);
             }
-            
-            
+
+
         }
-        item.classList.add('col-6','col-sm-4', 'col-md-3', 'col-xl-3')
-    })
-    
+        item.classList.add('col-6', 'col-sm-4', 'col-md-3', 'col-xl-3');
+    });
+
+    // add offset to inner container centered
     // const contentRowChild = document.querySelector('.content-container .row').firstElementChild;
     // contentRowChild.classList.remove('col-xl-9');
     // contentRowChild.classList.add('col-xl-7', 'offset-xl-2');
-    
+
     const header = document.getElementById('navbar-header');
     const navbar = document.querySelector('#navbar-header .navbar-nav');
-    
+
     //add delivery radius icon to header bar
     const radiusLi = document.createElement('li');
     radiusLi.classList.add('nav-item', 's-header-nav-item');
     const radiusDays = document.createElement('i');
-    radiusDays.classList.add('fas', 'fa-map-marker-alt')
+    radiusDays.classList.add('fas', 'fa-map-marker-alt');
     radiusLi.append(radiusDays);
-    navbar.prepend(radiusLi)
-    
+    navbar.prepend(radiusLi);
+
     //add delivery days to header bar
     const deliveryLi = document.createElement('li');
     deliveryLi.classList.add('nav-item', 's-header-nav-item', 'nav-link');
     const deliveryDaysWrap = document.createElement('span');
-    deliveryDaysWrap.append(deliveryDays)
+    deliveryDaysWrap.append(deliveryDays);
     deliveryLi.append(deliveryDaysWrap);
-    
-    navbar.prepend(deliveryLi)
-    
-    
+
+    navbar.prepend(deliveryLi);
+
+
     //add Icons
     const filterCategories = document.querySelector('.filter-attribute[data-filter-attribute="category"]')
     const filterCategoriesInputs = filterCategories.querySelectorAll('.s-filter-choices .ilx-filter-item input')
+
+    const filterCategories = document.querySelector('.filter-attribute[data-filter-attribute="category"]');
+    // const filterCategoriesInputs = filterCategories.querySelectorAll('.s-filter-choices .ilx-filter-item input');
+    // console.log('filterCategories', filterCategories, 'filterCategoriesInputs', filterCategoriesInputs);
+
     filterCategoriesInputs.forEach((input, i) => {
         const span = document.createElement('span');
-        span.classList.add('icon')
-        switch(input.value) {
-            case "Obst & Gemüse": span.style.backgroundImage = obstGemueseIcon; break;
-            case "Backwaren": span.style.backgroundImage = brotIcon; break;
-            case "Milchprodukte & Eier": span.style.backgroundImage = milchprodukteIcon; break;
-            case "Fertiges": span.style.backgroundImage = fertiggerichteIcon; break;
-            case "Fleisch & Wurst": span.style.backgroundImage = fleischIcon; break;
-            case "Trockenprodukte": span.style.backgroundImage = trockenprodukteIcon; break;
-            case "Aufstriche": span.style.backgroundImage = aufstrichIcon; break;
-            case "Gewürze & Öl": span.style.backgroundImage = gewuerzeIcon; break;
-            case "Getränke": span.style.backgroundImage = getraenkeIcon; break;
-            case "Neu bei uns": span.style.backgroundImage = getraenkeIcon; break;
-            case "Vegan": span.style.backgroundImage = veganIcon; break;
-            case "Non-Food": span.style.backgroundImage = nonfoodIcon; break;
-        }
-      
-        input.parentNode.prepend(span)
-    
-    })
+        span.classList.add('icon');
+        switch (input.value) {
+            case "Obst & Gemüse":
+                span.style.backgroundImage = obstGemueseIcon;
+                break;
+            case "Backwaren":
+                span.style.backgroundImage = brotIcon;
+                break;
+            case "Milchprodukte & Eier":
+                span.style.backgroundImage = milchprodukteIcon;
+                break;
+            case "Fertiges":
+                span.style.backgroundImage = fertiggerichteIcon;
+                break;
+            case "Fleisch & Wurst":
+                span.style.backgroundImage = fleischIcon;
+                break;
+            case "Trockenprodukte":
+                span.style.backgroundImage = trockenprodukteIcon;
+                break;
+            case "Aufstriche":
+                span.style.backgroundImage = aufstrichIcon;
+                break;
+            case "Gewürze & Öl":
+                span.style.backgroundImage = gewuerzeIcon;
+                break;
+            case "Getränke":
+                span.style.ba
+                ckgroundImage = getraenkeIcon;
+                break;
+            case "Neu bei uns":
+                span.style.backgroundImage = getraenkeIcon;
+                break;
+            case "Vegan":
+                span.style.backgroundImage = veganIcon;
+                break;
+            case "Non-Food":
+                span.style.backgroundImage = nonfoodIcon;
+                break;
+        };
+
+        input.parentNode.prepend(span);
+
+    });
+
 });
+
+
+function hasClass(target, className) {
+    return new RegExp('(\\s|^)' + className + '(\\s|$)').test(target.className);
+}
