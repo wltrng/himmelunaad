@@ -85,7 +85,7 @@ a {
 
 // category filter icons
 .filter-attribute[data-filter-attribute="category"] {
-    display: block!important;
+    // display: block!important;
     cursor: pointer;
 
 
@@ -98,7 +98,7 @@ a {
     .ilx-filter-item {
         margin-left: 2px;
         margin-right: 2px;
-        cursor: pointer;
+        cursor: inherit;
 
         &:hover {
             .icon{
@@ -106,6 +106,9 @@ a {
                 transform: scale(1.1);
             }
 
+        }
+        label {
+            cursor: pointer;
         }
 
         .icon {

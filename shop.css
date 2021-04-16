@@ -58,7 +58,6 @@
   }
   
   .filter-attribute[data-filter-attribute=category] {
-    display: block !important;
     cursor: pointer;
   }
   .filter-attribute[data-filter-attribute=category] .s-filter-choices {
@@ -69,10 +68,13 @@
   .filter-attribute[data-filter-attribute=category] .ilx-filter-item {
     margin-left: 2px;
     margin-right: 2px;
-    cursor: pointer;
+    cursor: inherit;
   }
   .filter-attribute[data-filter-attribute=category] .ilx-filter-item:hover .icon {
     transform: scale(1.1);
+  }
+  .filter-attribute[data-filter-attribute=category] .ilx-filter-item label {
+    cursor: pointer;
   }
   .filter-attribute[data-filter-attribute=category] .ilx-filter-item .icon {
     background-position: center;
