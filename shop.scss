@@ -1,0 +1,148 @@
+:root {
+    --primary-green: #21821D;
+}
+
+.alert-info {
+    color: black;
+    box-shadow: 0 1px 4px 0 #0000000E;
+
+    background-color: #ffffff82;
+    border: 1px solid #0000000C;
+}
+
+footer {
+    background-color: var(--primary-green);
+    border: none;
+
+    &:after {
+        display: none;
+    }
+
+    .container-fluid {
+        display: flex;
+        align-items: center;
+
+        .form-row {
+            flex: 1;
+        }
+    }
+}
+
+a {
+    color: #616161;
+
+}
+
+#navbar-header {
+    .navbar-nav {
+        width: 100%;
+        justify-content: space-around;
+
+        .nav-item.s-header-nav-item {
+            align-self: center;
+        }
+    }
+}
+
+
+.s-content {
+    //remove margin -15 for s-content row
+    margin-left: 0;
+    margin-right: 0;
+
+    //hide alerts in main column
+    .s-main-column {
+        .s-alert {
+
+            .alert,
+            .alert-info {
+                display: none;
+            }
+        }
+
+        .s-panel-body {
+            .s-item-container {
+
+                .card {
+                    height: 100%;
+
+                    .card-body {
+                        justify-content: space-between;
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+//hide filters
+.filter-attribute:not([data-filter-attribute="category"]) {
+    display: none !important;
+}
+
+// category filter icons
+.filter-attribute[data-filter-attribute="category"] {
+
+    cursor: pointer;
+
+
+    .s-filter-choices {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .ilx-filter-item {
+        margin-left: 2px;
+        margin-right: 2px;
+
+        &:hover {
+            transform: scale(1.1);
+
+        }
+
+        .icon {
+            background-position: center;
+            background-size: contain;
+            width: 50px;
+            height: 50px;
+            display: block;
+            margin: 5px auto;
+        }
+    }
+
+}
+
+
+.carousel {
+
+    &-item {
+
+        .embed-responsive .embed-responsive-item,
+        .embed-responsive embed,
+        .embed-responsive iframe,
+        .embed-responsive object,
+        .embed-responsive video {
+            background-size: cover !important;
+        }
+    }
+}
+
+.modal-body {
+    .card {
+        .card-body {
+            .carousel {
+                .carousel-inner {
+                    .carousel-item {
+                        .embed-responsiv {
+                            background-size: contain !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

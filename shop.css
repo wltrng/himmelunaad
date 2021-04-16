@@ -1,0 +1,94 @@
+:root {
+    --primary-green: #21821D;
+  }
+  
+  .alert-info {
+    color: black;
+    box-shadow: 0 1px 4px 0 #0000000E;
+    background-color: #ffffff82;
+    border: 1px solid #0000000C;
+  }
+  
+  footer {
+    background-color: var(--primary-green);
+    border: none;
+  }
+  footer:after {
+    display: none;
+  }
+  footer .container-fluid {
+    display: flex;
+    align-items: center;
+  }
+  footer .container-fluid .form-row {
+    flex: 1;
+  }
+  
+  a {
+    color: #616161;
+  }
+  
+  #navbar-header .navbar-nav {
+    width: 100%;
+    justify-content: space-around;
+  }
+  #navbar-header .navbar-nav .nav-item.s-header-nav-item {
+    align-self: center;
+  }
+  
+  .s-content {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .s-content .s-main-column .s-alert .alert,
+  .s-content .s-main-column .s-alert .alert-info {
+    display: none;
+  }
+  .s-content .s-main-column .s-panel-body .s-item-container .card {
+    height: 100%;
+  }
+  .s-content .s-main-column .s-panel-body .s-item-container .card .card-body {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .filter-attribute:not([data-filter-attribute=category]) {
+    display: none !important;
+  }
+  
+  .filter-attribute[data-filter-attribute=category] {
+    cursor: pointer;
+  }
+  .filter-attribute[data-filter-attribute=category] .s-filter-choices {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .filter-attribute[data-filter-attribute=category] .ilx-filter-item {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+  .filter-attribute[data-filter-attribute=category] .ilx-filter-item:hover {
+    transform: scale(1.1);
+  }
+  .filter-attribute[data-filter-attribute=category] .ilx-filter-item .icon {
+    background-position: center;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 5px auto;
+  }
+  
+  .carousel-item .embed-responsive .embed-responsive-item,
+  .carousel-item .embed-responsive embed,
+  .carousel-item .embed-responsive iframe,
+  .carousel-item .embed-responsive object,
+  .carousel-item .embed-responsive video {
+    background-size: cover !important;
+  }
+  
+  .modal-body .card .card-body .carousel .carousel-inner .carousel-item .embed-responsiv {
+    background-size: contain !important;
+  }
