@@ -59,16 +59,39 @@ window.addEventListener('DOMContentLoaded', function () {
     panelBody.classList.remove('align-items-start')
     panelBody.classList.add('align-items-stretch')
     panelBody.querySelectorAll('.s-item-container').forEach(item => {
-        for (let i = item.classList.length - 1; i >= 0; i--) {
-            const className = item.classList[i];
-            if (className.startsWith('col-')) {
-                item.classList.remove(className);
-            }
+        // for (let i = item.classList.length - 1; i >= 0; i--) {
+        //     const className = item.classList[i];
+        //     if (className.startsWith('col-')) {
+        //         item.classList.remove(className);
+        //     }
 
 
-        }
-        item.classList.add('col-6', 'col-sm-4', 'col-md-3', 'col-xl-3');
+        // }
+        item.classList.remove('col-sm-12', 'col-md-6', 'col-lg-4', 'col-xl-4')
+        item.classList.add('col-sm-4', 'col-md-3', 'col-xl-3');
     });
+
+    let observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (!mutation.addedNodes) return
+
+            for (let i = 0; i < mutation.addedNodes.length; i++) {
+                let item = mutation.addedNodes[i]
+                item.classList.remove('col-sm-12', 'col-md-6', 'col-lg-4', 'col-xl-4')
+                item.classList.add('col-sm-4', 'col-md-3', 'col-xl-3');
+
+            }
+        })
+    })
+
+    observer.observe(panelBody, {
+        childList: true,
+        subtree: true,
+        attributes: false,
+        characterData: false
+    })
+
+    //   observer.disconnect()
 
     // add offset to inner container centered
     // const contentRowChild = document.querySelector('.content-container .row').firstElementChild;
@@ -132,8 +155,7 @@ window.addEventListener('DOMContentLoaded', function () {
                         span.style.backgroundImage = gewuerzeIcon;
                         break;
                     case "Getränke":
-                        span.style.ba
-                        ckgroundImage = getraenkeIcon;
+                        span.style.backgroundImage = getraenkeIcon;
                         break;
                     case "Neu bei uns":
                         span.style.backgroundImage = getraenkeIcon;
@@ -145,13 +167,13 @@ window.addEventListener('DOMContentLoaded', function () {
                         span.style.backgroundImage = nonfoodIcon;
                         break;
                 };
-        
+
                 input.parentNode.prepend(span);
-        
+
             });
 
         }
     }, 100);
-    
+
 
 });
