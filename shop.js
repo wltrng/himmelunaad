@@ -158,7 +158,7 @@ window.addEventListener('DOMContentLoaded', function () {
                         span.style.backgroundImage = getraenkeIcon;
                         break;
                     case "Neu bei uns":
-                        span.style.backgroundImage = getraenkeIcon;
+                        span.style.backgroundImage = neuIcon;
                         break;
                     case "Vegan":
                         span.style.backgroundImage = veganIcon;
