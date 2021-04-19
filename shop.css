@@ -97,3 +97,20 @@
   .modal-body .card .card-body .carousel .carousel-inner .carousel-item .embed-responsiv {
     background-size: contain !important;
   }
+  
+  @media only screen and (max-width: 400px) {
+    .s-product-cart-controls .add-cart-item-form .cart-item-quantity-wrapper .d-flex:first-of-type {
+      flex-wrap: wrap;
+    }
+    .s-product-cart-controls .add-cart-item-form .cart-item-quantity-wrapper .input-group {
+      flex-wrap: nowrap;
+    }
+    .s-product-cart-controls .add-cart-item-form .cart-item-quantity-wrapper .s-add-cart-item {
+      width: 100%;
+    }
+    .s-product-cart-controls .add-cart-item-form .cart-item-quantity-wrapper .s-add-cart-item .add-cart-item {
+      width: 100%;
+      margin-left: 0 !important;
+      margin-top: 0.5rem;
+    }
+  }

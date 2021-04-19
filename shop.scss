@@ -101,12 +101,13 @@ a {
         cursor: inherit;
 
         &:hover {
-            .icon{
+            .icon {
 
                 transform: scale(1.1);
             }
 
         }
+
         label {
             cursor: pointer;
         }
@@ -123,6 +124,7 @@ a {
     }
 
 }
+
 
 
 .carousel {
@@ -151,6 +153,37 @@ a {
                     }
                 }
             }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+    .s-product-cart-controls {
+
+        .add-cart-item-form {
+            .cart-item-quantity-wrapper {
+                .d-flex:first-of-type {
+                    flex-wrap: wrap;
+                }
+
+                .input-group {
+                    flex-wrap: nowrap;
+
+                }
+
+                .s-add-cart-item {
+                    width: 100%;
+
+                    .add-cart-item {
+                        width: 100%;
+                        margin-left: 0 !important;
+                        margin-top: .5rem;
+                    }
+
+                }
+            }
+
         }
     }
 }
