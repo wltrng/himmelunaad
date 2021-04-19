@@ -106,7 +106,7 @@
       flex-wrap: nowrap;
     }
     .s-product-cart-controls .add-cart-item-form .cart-item-quantity-wrapper .input-group .cart-item-quantity {
-      max-width: unset;
+      max-width: unset!important;
     }
     .s-product-cart-controls .add-cart-item-form .cart-item-quantity-wrapper .s-add-cart-item {
       width: 100%;
