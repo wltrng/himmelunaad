@@ -157,6 +157,13 @@ a {
     }
 }
 
+// overwrite btn focus color
+.btn-primary.focus, .btn-primary:focus, .btn-primary:hover {
+    color: #fff;
+    background-color: #155814;
+    border-color: #124e11;
+}
+
 
 @media only screen and (max-width: 400px) {
     .s-product-cart-controls {

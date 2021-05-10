@@ -7,26 +7,26 @@ const deliveryDays = "Liefertage: Dienstag und Freitag";
 /* SET IMAGE SOURCE FOR ICONS
  */
 const aufstrichIcon =
-    "url(https://my.frachtpilot.de/image/bc27b782/url/475dcb42)";
+    "url(https://my.frachtpilot.de/image/fa4867f9/url/475dcb42";
 const fleischIcon =
-    "url(https://my.frachtpilot.de/image/743194ae/url/475dcb42)";
-const neuIcon = "url(https://my.frachtpilot.de/image/8a995441/url/475dcb42)";
+    "url(https://my.frachtpilot.de/image/b11271bb/url/475dcb42)";
+const neuIcon = "url(https://my.frachtpilot.de/image/8e7e9fe2/url/475dcb42)";
 const gewuerzeIcon =
-    "url(https://my.frachtpilot.de/image/d7e76082/url/475dcb42)";
-const brotIcon = "url(https://my.frachtpilot.de/image/f9f5144e/url/475dcb42)";
+    "url(https://my.frachtpilot.de/image/83b917fc/url/475dcb42)";
+const brotIcon = "url(https://my.frachtpilot.de/image/b5fe4afc/url/475dcb42)";
 const getraenkeIcon =
-    "url(https://my.frachtpilot.de/image/7a196cc0/url/475dcb42)";
+    "url(https://my.frachtpilot.de/image/a96454a5/url/475dcb42)";
 const nonfoodIcon =
-    "url(https://my.frachtpilot.de/image/75043000/url/475dcb42)";
+    "url(https://my.frachtpilot.de/image/c0c7b61a/url/475dcb42)";
 const trockenprodukteIcon =
-    "url(https://my.frachtpilot.de/image/973b7d3f/url/475dcb42)";
+    "url(https://my.frachtpilot.de/image/07cc7024/url/475dcb42)";
 const fertiggerichteIcon =
-    "url(https://my.frachtpilot.de/image/5c97e5ef/url/475dcb42)";
+    "url(https://my.frachtpilot.de/image/655c4db0/url/475dcb42)";
 const milchprodukteIcon =
-    "url(https://my.frachtpilot.de/image/e548bfec/url/475dcb42)";
-const veganIcon = "url(https://my.frachtpilot.de/image/a5cb912c/url/475dcb42)";
+    "url(https://my.frachtpilot.de/image/31c92d33/url/475dcb42)";
+const veganIcon = "url(https://my.frachtpilot.de/image/ed977c14/url/475dcb42)";
 const obstGemueseIcon =
-    "url(https://my.frachtpilot.de/image/814a783d/url/475dcb42)";
+    "url(https://my.frachtpilot.de/image/9229b453/url/475dcb42)";
 
 window.addEventListener("DOMContentLoaded", function () {
     //display alert-info ('Hallo..') in s-filter-column, not in s-main
@@ -98,17 +98,20 @@ window.addEventListener("DOMContentLoaded", function () {
 
     //add delivery radius icon to header bar
     const radiusLi = document.createElement("li");
-    radiusLi.classList.add("nav-item", "s-header-nav-item");
-    const radiusDays = document.createElement("i");
+    radiusLi.classList.add("nav-item", "s-header-nav-item", "delivery-radius");
+    radiusLi.dataset.toggle = "modal";
+    radiusLi.dataset.target = "#dialog-ajax-default";
+    radiusLi.title = "Lieferradius";
+    const radiusIcon = document.createElement("i");
     const radiusLink = document.createElement("a");
     radiusLink.href = "https://www.himmel-un-aad.de/lieferradius/";
     radiusLink.target = "_blank";
-    radiusDays.classList.add("fas", "fa-map-marker-alt");
-    radiusDays.style.color = getComputedStyle(
+    radiusIcon.classList.add("fas", "fa-map-marker-alt");
+    radiusIcon.style.color = getComputedStyle(
         document.documentElement
     ).getPropertyValue("--primary-green");
-    radiusDays.style.fontSize = "25px";
-    radiusLink.append(radiusDays);
+    radiusIcon.style.fontSize = "25px";
+    radiusLink.append(radiusIcon);
     radiusLi.append(radiusLink);
     if (navbar) {
 
