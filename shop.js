@@ -1,7 +1,7 @@
 /* 
 /* SET TEXT FOR HEADER NAVBAR -- DELIVERY DAYS
  */
-const deliveryDays = "Liefertage: Dienstag und Freitag";
+const deliveryDays = "Liefertage: Dienstag bis Freitag";
 
 /* 
 /* SET IMAGE SOURCE FOR ICONS
