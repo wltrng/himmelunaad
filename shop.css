@@ -40,7 +40,7 @@ a {
   margin-left: 0;
   margin-right: 0;
 }
-.s-content .s-main-column .s-alert .alert,
+.s-content .s-main-column .s-alert.alert,
 .s-content .s-main-column .s-alert .alert-info {
   display: none;
 }
