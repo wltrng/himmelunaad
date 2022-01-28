@@ -1,14 +1,17 @@
 :root {
   --primary-green: #21821D;
 }
-
-.alert-info {
+.alert-info, .alert-warning {
   color: black;
   box-shadow: 0 1px 4px 0 #0000000E;
   background-color: #ffffff82;
   border: 1px solid #0000000C;
 }
-
+.alert-info .btn-light, .alert-warning .btn-light {
+  color: var(--primary-green);
+  border: 1px solid #ced4da;
+  font-style: italic;
+}
 footer {
   background-color: var(--primary-green);
   border: none;
@@ -23,11 +26,9 @@ footer .container-fluid {
 footer .container-fluid .form-row {
   flex: 1;
 }
-
 a {
   color: #616161;
 }
-
 #navbar-header .navbar-nav {
   width: 100%;
   justify-content: space-around;
@@ -35,13 +36,11 @@ a {
 #navbar-header .navbar-nav .nav-item.s-header-nav-item {
   align-self: center;
 }
-
 .s-content {
   margin-left: 0;
   margin-right: 0;
 }
-.s-content .s-main-column .s-alert.alert,
-.s-content .s-main-column .s-alert .alert-info {
+.s-content .s-main-column .s-alert .alert, .s-content .s-main-column .s-alert .alert-info {
   display: none;
 }
 .s-content .s-main-column .s-panel-body .s-item-container .card {
@@ -52,31 +51,29 @@ a {
   display: flex;
   flex-direction: column;
 }
-
-.filter-attribute:not([data-filter-attribute=category]) {
+.filter-attribute:not([data-filter-attribute="category"]) {
   display: none !important;
 }
-
-.filter-attribute[data-filter-attribute=category] {
+.filter-attribute[data-filter-attribute="category"] {
   cursor: pointer;
 }
-.filter-attribute[data-filter-attribute=category] .s-filter-choices {
+.filter-attribute[data-filter-attribute="category"] .s-filter-choices {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.filter-attribute[data-filter-attribute=category] .ilx-filter-item {
+.filter-attribute[data-filter-attribute="category"] .ilx-filter-item {
   margin-left: 2px;
   margin-right: 2px;
   cursor: inherit;
 }
-.filter-attribute[data-filter-attribute=category] .ilx-filter-item:hover .icon {
+.filter-attribute[data-filter-attribute="category"] .ilx-filter-item:hover .icon {
   transform: scale(1.1);
 }
-.filter-attribute[data-filter-attribute=category] .ilx-filter-item label {
+.filter-attribute[data-filter-attribute="category"] .ilx-filter-item label {
   cursor: pointer;
 }
-.filter-attribute[data-filter-attribute=category] .ilx-filter-item .icon {
+.filter-attribute[data-filter-attribute="category"] .ilx-filter-item .icon {
   background-position: center;
   background-size: contain;
   width: 50px;
@@ -85,25 +82,17 @@ a {
   margin: 5px auto;
   cursor: pointer;
 }
-
-.carousel-item .embed-responsive .embed-responsive-item,
-.carousel-item .embed-responsive embed,
-.carousel-item .embed-responsive iframe,
-.carousel-item .embed-responsive object,
-.carousel-item .embed-responsive video {
+.carousel-item .embed-responsive .embed-responsive-item, .carousel-item .embed-responsive embed, .carousel-item .embed-responsive iframe, .carousel-item .embed-responsive object, .carousel-item .embed-responsive video {
   background-size: cover !important;
 }
-
 .modal-body .card .card-body .carousel .carousel-inner .carousel-item .embed-responsiv {
   background-size: contain !important;
 }
-
 .btn-primary.focus, .btn-primary:focus, .btn-primary:hover {
   color: #fff;
   background-color: #155814;
   border-color: #124e11;
 }
-
 @media only screen and (max-width: 400px) {
   .s-product-cart-controls .add-cart-item-form .cart-item-quantity-wrapper .d-flex:first-of-type {
     flex-wrap: wrap;
