@@ -2,13 +2,20 @@
     --primary-green: #21821D;
 }
 
-.alert-info {
+.alert-info, .alert-warning {
     color: black;
     box-shadow: 0 1px 4px 0 #0000000E;
 
     background-color: #ffffff82;
     border: 1px solid #0000000C;
+
+    .btn-light {
+        color: var(--primary-green);
+        border: 1px solid #ced4da;
+        font-style: italic;
+    }
 }
+
 
 footer {
     background-color: var(--primary-green);
