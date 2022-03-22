@@ -7,28 +7,28 @@ const deliveryDays = "Liefertage: Dienstag bis Freitag";
 /* SET IMAGE SOURCE FOR ICONS
  */
 const aufstrichIcon =
-    "url(https://shop.himmel-un-aad.de/image/fa4867f9/url/475dcb42";
+    "url(https://shop.himmel-un-aad.de/image/e5618854/url/475dcb42)";
 const fleischIcon =
-    "url(https://shop.himmel-un-aad.de/image/b11271bb/url/475dcb42)";
-const neuIcon = "url(https://shop.himmel-un-aad.de/image/8e7e9fe2/url/475dcb42)";
+    "url(https://shop.himmel-un-aad.de/image/b7f34527/url/475dcb42)";
+const neuIcon = "url(https://shop.himmel-un-aad.de/image/cf8e2011/url/475dcb42)";
 const gewuerzeIcon =
-    "url(https://shop.himmel-un-aad.de/image/83b917fc/url/475dcb42)";
-const brotIcon = "url(https://shop.himmel-un-aad.de/image/b5fe4afc/url/475dcb42)";
+    "url(https://shop.himmel-un-aad.de/image/2b14f2e7/url/475dcb42)";
+const brotIcon = "url(https://shop.himmel-un-aad.de/image/e1382fbb/url/475dcb42)";
 const getraenkeIcon =
-    "url(https://shop.himmel-un-aad.de/image/a96454a5/url/475dcb42)";
+    "url(https://shop.himmel-un-aad.de/image/ae517ec1/url/475dcb42)";
 const nonfoodIcon =
-    "url(https://shop.himmel-un-aad.de/image/c0c7b61a/url/475dcb42)";
+    "url(https://shop.himmel-un-aad.de/image/31db9468/url/475dcb42)"; 
 const trockenprodukteIcon =
-    "url(https://shop.himmel-un-aad.de/image/07cc7024/url/475dcb42)";
+    "url(https://shop.himmel-un-aad.de/image/f9165b8a/url/475dcb42)";
 const fertiggerichteIcon =
-    "url(https://shop.himmel-un-aad.de/image/655c4db0/url/475dcb42)";
+    "url(https://shop.himmel-un-aad.de/image/f74ff33c/url/475dcb42)";
 const milchprodukteIcon =
-    "url(https://shop.himmel-un-aad.de/image/31c92d33/url/475dcb42)";
-const veganIcon = "url(https://shop.himmel-un-aad.de/image/ed977c14/url/475dcb42)";
+    "url(https://shop.himmel-un-aad.de/image/4adf44fb/url/475dcb42)";
+const veganIcon = "url(https://shop.himmel-un-aad.de/image/6e1a2a85/url/475dcb42)";
 const obstGemueseIcon =
-    "url(https://shop.himmel-un-aad.de/image/9229b453/url/475dcb42)";
+    "url(https://shop.himmel-un-aad.de/image/6bb9eb4e/url/475dcb42)";
 const eigeneProdukteIcon =
-    "url(https://shop.himmel-un-aad.de/image/1695de12/url/475dcb42)";
+    "url(https://shop.himmel-un-aad.de/image/1c25e0dd/url/475dcb42)";
 
 window.addEventListener("DOMContentLoaded", function () {
     //display alert-info ('Hallo..') in s-filter-column, not in s-main
