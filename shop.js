@@ -217,6 +217,9 @@ window.addEventListener("DOMContentLoaded", function () {
             case "Überregional":
               span.style.backgroundImage = überRegionalIcon;
               break;
+            case "Aktionen":
+              span.style.backgroundImage = aktionenIcon;
+              break;
           }
 
           input.parentNode.prepend(span);
